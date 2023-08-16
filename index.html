@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script/script.js"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="choice-group">
+                <div>
+                    <label class="check-container">Uppercase (A - Z)
+                        <input type="checkbox" class="checkbox" checked data-uppercase>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label class="check-container">Lowercase (a - b)
+                        <input type="checkbox" class="checkbox" checked data-lowercase>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label class="check-container">Numbers (0 - 9)
+                        <input type="checkbox" class="checkbox" checked data-numbers>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label class="check-container">Special (!$#)
+                        <input type="checkbox" class="checkbox" checked data-special>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                
+            </div>
+
+            <div class="password">
+                <input type="text" id="password-output" data-password-output onclick="copyPassword()">
+                <p data-info-tip>Click on password to copy</p>
+               
+                <div class="length-adjust">
+                    <input type="range" min="4" max="15" value="8" data-length-input>
+                    <span data-length-display>8</span>
+                </div>
+            </div>
+        </div>
+        
+        <button type="button" data-generate-btn>GENERATE PASSWORD</button>
+        
+    </div>
+    
+</body>
+</html>
